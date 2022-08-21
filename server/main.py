@@ -2,16 +2,16 @@ from flask import Flask
 from flask_cors import CORS
 import re
 
+filepath = 'data.txt'
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=["GET"])
-def parse_file():
+def parse_file(filepath):
     data = {}
     players_array = []
     terrorists = []
     ct = []
-    with open('data.txt', 'r') as text_file:
+    with open(filepath, 'r') as text_file:
         lines = text_file.readlines()
         for part in lines:
 
@@ -63,6 +63,10 @@ def parse_file():
 
     return data
 
+
+@app.route('/', methods=["GET"])
+def send_data():
+  return parse_file(filepath)
 
 if __name__ == "__main__":
     app.run("localhost", 4200)
