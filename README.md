@@ -45,4 +45,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 # Getting Started with Server side
 
-python3 main.py
+### `python3 main.py`
