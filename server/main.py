@@ -54,7 +54,7 @@ def parse_file(filepath):
 
         if terrorists or ct:
             data['players'] = {
-                'terorists': terrorists,
+                'terrorists': terrorists,
                 'ct': ct
             }
 
