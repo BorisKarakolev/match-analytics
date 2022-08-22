@@ -20,6 +20,7 @@ def parse_file(filepath):
             rounds_played = re.search(r'RoundsPlayed: 22', part)
             all_time = re.search(r'50 min', part)
             game_map = re.search(r'de_nuke', part)
+            won = re.search(r'Team TeamVitality won.', part)
             players = re.search(r'21:30:51:\s"[a-zA-Z0-9]+\s?<[0-9]+><STEAM_([0-9]+(:[0-9]+)+)><[A-Z]+>"', part)
 
             if teams_score:
@@ -31,6 +32,8 @@ def parse_file(filepath):
                 data['all_time'] = re.findall('50', all_time.group())[0]
             if game_map:
                 data['map'] = game_map.group()
+            if won:
+                data['won'] = won.group()
             if players:
                 players_array.append(players.group())
 
