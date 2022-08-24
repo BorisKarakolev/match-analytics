@@ -47,8 +47,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Requierements
  
- Python 3.8.9
- Flask 2.2.2
+ Python 3.8.9 <br />
+ Flask 2.2.2 <br />
  regex 2022.7.25
 
 ### `python3 main.py`
