@@ -62,7 +62,7 @@ def parse_file(filepath):
             }
 
         if data['all_time'] and data['rounds_played']:
-            data['avg_round_length'] = str((int(data['all_time']) + int(data['rounds_played'])) / 2).split('.')[0]
+            data['avg_round_length'] = round((int(data['all_time']) / int(data['rounds_played'])), 1)
 
     return data
 

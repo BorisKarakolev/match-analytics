@@ -14,7 +14,7 @@ const Description = ({ statistics }) => {
         <li>{statistics.all_time} minutes match</li>
         <li>{statistics.rounds_played} rounds played</li>
         <li>map {statistics.map}</li>
-        <li>Average round length is {statistics.avg_round_length} seconds</li>
+        <li>Average round length is {statistics.avg_round_length} minutes</li>
       </ul>
     </div>
   );
